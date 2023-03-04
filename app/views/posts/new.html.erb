@@ -1,5 +1,7 @@
+<body class= "container">
 <h1>New Post</h1>
 
+<% if @current_user %>
 <%= form_with :model => @post do |form| %>
   <%= form.hidden_field "place_id" %>
   <p>
@@ -17,4 +19,5 @@
   <p>
     <%= form.submit %>
   </p>
+<% end %>
 <% end %>
