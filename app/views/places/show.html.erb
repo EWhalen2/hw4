@@ -5,6 +5,11 @@
   <b><%= post["title"] %></b>
   <p><%= post["posted_on"] %></p>
   <p><%= post["description"] %></p>
+  <% if post.uploaded_image.attached? %>
+        <img src="<%= url_for(post.uploaded_image) %>" class="img-fluid">
+      <% else %>
+        <img src="<%= post["image"] %>" class="img-fluid">
+      <% end %>
 <% end %>
 
 <p>
