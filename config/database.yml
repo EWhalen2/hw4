@@ -22,4 +22,7 @@ test:
 
 production:
   <<: *default
-  database: db/production.sqlite3
+  adapter: postgresql
+  database: emmett-whalen-entr451-hw4
+  username: my_app
+  password: <%= ENV["EMMETT-WHALEN-ENTR451-HW4_DATABASE_PASSWORD"] %>
