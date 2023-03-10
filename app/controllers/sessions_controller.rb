@@ -14,7 +14,7 @@ class SessionsController < ApplicationController
         redirect_to "/login"
       end
     else
-      flash["notice"] = "Email and password do not match. Please try again."
+      flash["notice"] = "You need to sign up before you can log in."
       redirect_to "/login"
     end
   end
